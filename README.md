@@ -1,10 +1,10 @@
 # Octaflow II Control App V1.0
-by Michael Rabenstein (February 2021)
+by Michael Rabenstein (October 2021)
 
 About:
 The Octaflow II Control App is a user written alternative to the official control software.  
 Therefore, the usage is at your own risk.  
-It is written and tested using MATLAB R2020b on a PC using Windows 10 (64 bit) as operating system.  
+It is written and tested using MATLAB R2021b on a PC using Windows 10 (64 bit) as operating system.  
 Octaflow II ™ is a trademark of ALA Scientific Instruments, Inc., Farmingdale, NY, USA.  
 Usage of the compiled app is only allowed with the Octaflow II™ system or other devices with Cypress controllers.  
 
@@ -15,7 +15,7 @@ Please respect the different licenses for the different forms
 
 System requirements:  
 •	Windows 10 (64 bit) (.NET Framework 4.0 or newer necessary)  
-•	MATLAB Runtime v. 9.9 from The MathWorks, Inc. System requirements available at www.mathworks.com)  
+•	MATLAB Runtime v. 9.11 from The MathWorks, Inc. System requirements available at www.mathworks.com)  
 •	Octaflow II Software Version 3.0.1.0 64 bit from ALA Scientific Instruments, Inc. installed to get the necessary drivers  
 •	CyUSB.dll v. 1.2.3.0 from the Cypress Semiconductor Corp., San Jose, CA, USA. (included in the compiled app, otherwise part of the EZ-USB FX3 Software Development Kit 1.3.4 (https://www.cypress.com/documentation/software-and-drivers/ez-usb-fx3-software-development-kit, last acess 04/13/2021))
 
