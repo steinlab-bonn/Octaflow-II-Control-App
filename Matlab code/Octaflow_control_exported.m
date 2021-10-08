@@ -3,118 +3,116 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
     % Properties that correspond to app components
     properties (Access = public)
         OctaflowIIControlAppUIFigure  matlab.ui.Figure
-        StartTextArea_1               matlab.ui.control.TextArea
-        BreakButton                   matlab.ui.control.Button
-        SynconButton                  matlab.ui.control.StateButton
-        StartAppButton                matlab.ui.control.Button
-        StartTextArea_2               matlab.ui.control.TextArea
-        StartSwitchonOctaflowIIsystemLabel  matlab.ui.control.Label
+        BreakPushedLabel              matlab.ui.control.Label
+        ManualButton                  matlab.ui.control.Button
+        TextArea_17                   matlab.ui.control.TextArea
+        ClosePanel                    matlab.ui.container.Panel
+        CloseLabel                    matlab.ui.control.Label
+        ConnectionlostPanel           matlab.ui.container.Panel
+        TextArea_4                    matlab.ui.control.TextArea
         TabGroup                      matlab.ui.container.TabGroup
         DirectModeTab                 matlab.ui.container.Tab
         DirectModePanel               matlab.ui.container.Panel
-        Valve1Button                  matlab.ui.control.StateButton
-        DirectValve2Button            matlab.ui.control.StateButton
-        DirectValve3Button            matlab.ui.control.StateButton
-        DirectValve4Button            matlab.ui.control.StateButton
-        DirectValve5Button            matlab.ui.control.StateButton
-        DirectValve6Button            matlab.ui.control.StateButton
-        Valve7Button                  matlab.ui.control.StateButton
-        DirectValve8Button            matlab.ui.control.StateButton
-        DirectFlushButton             matlab.ui.control.StateButton
-        DirectAlt1Button              matlab.ui.control.StateButton
-        DirectAlt2Button              matlab.ui.control.StateButton
-        DirectAlt3Button              matlab.ui.control.StateButton
-        DirectAlt4Button              matlab.ui.control.StateButton
-        DirectOntimeLabel             matlab.ui.control.Label
-        pressurepsiSpinner_2Label     matlab.ui.control.Label
-        pressurepsiSpinner_2          matlab.ui.control.Spinner
-        OntimesSpinnerLabel           matlab.ui.control.Label
-        DirectOntimesSpinner          matlab.ui.control.Spinner
-        closevalveSwitchLabel         matlab.ui.control.Label
-        DirectclosevalveSwitch        matlab.ui.control.Switch
-        DirectTextArea_1              matlab.ui.control.TextArea
-        DirectTextArea_2              matlab.ui.control.TextArea
-        DirectTextArea_3              matlab.ui.control.TextArea
-        DirectTextArea_4              matlab.ui.control.TextArea
-        DirectTextArea_5              matlab.ui.control.TextArea
-        DirectTextArea_6              matlab.ui.control.TextArea
-        DirectTextArea_7              matlab.ui.control.TextArea
         DirectTextArea_8              matlab.ui.control.TextArea
+        DirectTextArea_7              matlab.ui.control.TextArea
+        DirectTextArea_6              matlab.ui.control.TextArea
+        DirectTextArea_5              matlab.ui.control.TextArea
+        DirectTextArea_4              matlab.ui.control.TextArea
+        DirectTextArea_3              matlab.ui.control.TextArea
+        DirectTextArea_2              matlab.ui.control.TextArea
+        DirectTextArea_1              matlab.ui.control.TextArea
+        DirectclosevalveSwitch        matlab.ui.control.Switch
+        closevalveSwitchLabel         matlab.ui.control.Label
+        DirectOntimesSpinner          matlab.ui.control.Spinner
+        OntimesSpinnerLabel           matlab.ui.control.Label
+        pressurepsiSpinner_2          matlab.ui.control.Spinner
+        pressurepsiSpinner_2Label     matlab.ui.control.Label
+        DirectOntimeLabel             matlab.ui.control.Label
+        DirectAlt4Button              matlab.ui.control.StateButton
+        DirectAlt3Button              matlab.ui.control.StateButton
+        DirectAlt2Button              matlab.ui.control.StateButton
+        DirectAlt1Button              matlab.ui.control.StateButton
+        DirectFlushButton             matlab.ui.control.StateButton
+        DirectValve8Button            matlab.ui.control.StateButton
+        Valve7Button                  matlab.ui.control.StateButton
+        DirectValve6Button            matlab.ui.control.StateButton
+        DirectValve5Button            matlab.ui.control.StateButton
+        DirectValve4Button            matlab.ui.control.StateButton
+        DirectValve3Button            matlab.ui.control.StateButton
+        DirectValve2Button            matlab.ui.control.StateButton
+        Valve1Button                  matlab.ui.control.StateButton
         SequenceTab                   matlab.ui.container.Tab
         SequencePanel                 matlab.ui.container.Panel
-        SequenceTable                 matlab.ui.control.Table
-        SequenceAddstepButton         matlab.ui.control.Button
-        SequenceStartsequenceButton   matlab.ui.control.Button
-        SequenceStepStandbyLabel      matlab.ui.control.Label
-        SequenceDeleteSpinner         matlab.ui.control.Spinner
-        SequenceDeletestepButton      matlab.ui.control.Button
-        SequenceSeqEditPanel          matlab.ui.container.Panel
-        SequenceStepSpinner           matlab.ui.control.Spinner
-        SequenceValveSpinner          matlab.ui.control.Spinner
-        SequencePressureSpinner       matlab.ui.control.Spinner
-        SequenceWaitTimeAfter         matlab.ui.control.NumericEditField
-        SequenceOnTime                matlab.ui.control.NumericEditField
-        SequenceSpecialDropDown       matlab.ui.control.DropDown
-        SequenceLamp                  matlab.ui.control.Lamp
-        SequenceDeleteallButton       matlab.ui.control.Button
         SequenceCheckBox              matlab.ui.control.CheckBox
+        SequenceDeleteallButton       matlab.ui.control.Button
+        SequenceLamp                  matlab.ui.control.Lamp
+        SequenceSeqEditPanel          matlab.ui.container.Panel
+        SequenceSpecialDropDown       matlab.ui.control.DropDown
+        SequenceOnTime                matlab.ui.control.NumericEditField
+        SequenceWaitTimeAfter         matlab.ui.control.NumericEditField
+        SequencePressureSpinner       matlab.ui.control.Spinner
+        SequenceValveSpinner          matlab.ui.control.Spinner
+        SequenceStepSpinner           matlab.ui.control.Spinner
+        SequenceDeletestepButton      matlab.ui.control.Button
+        SequenceDeleteSpinner         matlab.ui.control.Spinner
+        SequenceStepStandbyLabel      matlab.ui.control.Label
+        SequenceStartsequenceButton   matlab.ui.control.Button
+        SequenceAddstepButton         matlab.ui.control.Button
+        SequenceTable                 matlab.ui.control.Table
         PrimingTab                    matlab.ui.container.Tab
         PrimingPanel                  matlab.ui.container.Panel
-        LoopsSpinnerLabel             matlab.ui.control.Label
-        PrimingLoopsSpinner           matlab.ui.control.Spinner
-        pressurepsiSpinner_3Label     matlab.ui.control.Label
-        PrimingPressurepsiSpinner     matlab.ui.control.Spinner
-        PrimingStartButton            matlab.ui.control.Button
-        openingtimevalvesLabel        matlab.ui.control.Label
-        PrimingOntimevalvesSpinner    matlab.ui.control.Spinner
-        PrimingValveStandbyLabel      matlab.ui.control.Label
-        PrimingLoopStandbyLabel       matlab.ui.control.Label
-        waittimebetweenvalvessSpinnerLabel_3  matlab.ui.control.Label
-        PrimingWaittimeSpinner        matlab.ui.control.Spinner
-        PrimingLamp                   matlab.ui.control.Lamp
-        PrimingTimer                  matlab.ui.control.Gauge
-        PrimingTimerTextArea          matlab.ui.control.TextArea
-        PrimingSpecialDropDown        matlab.ui.control.DropDown
-        PrimingWaittimeSpinnerLabel   matlab.ui.control.Label
-        valvedirectionSwitchLabel     matlab.ui.control.Label
         PrimingValvedirectionSwitch   matlab.ui.control.Switch
+        valvedirectionSwitchLabel     matlab.ui.control.Label
+        PrimingWaittimeSpinnerLabel   matlab.ui.control.Label
+        PrimingSpecialDropDown        matlab.ui.control.DropDown
+        PrimingTimerTextArea          matlab.ui.control.TextArea
+        PrimingTimer                  matlab.ui.control.Gauge
+        PrimingLamp                   matlab.ui.control.Lamp
+        PrimingWaittimeSpinner        matlab.ui.control.Spinner
+        waittimebetweenvalvessSpinnerLabel_3  matlab.ui.control.Label
+        PrimingLoopStandbyLabel       matlab.ui.control.Label
+        PrimingValveStandbyLabel      matlab.ui.control.Label
+        PrimingOntimevalvesSpinner    matlab.ui.control.Spinner
+        openingtimevalvesLabel        matlab.ui.control.Label
+        PrimingStartButton            matlab.ui.control.Button
+        PrimingPressurepsiSpinner     matlab.ui.control.Spinner
+        pressurepsiSpinner_3Label     matlab.ui.control.Label
+        PrimingLoopsSpinner           matlab.ui.control.Spinner
+        LoopsSpinnerLabel             matlab.ui.control.Label
         CleaningTab                   matlab.ui.container.Tab
         CleaningPanel                 matlab.ui.container.Panel
-        pressurepsiSpinnerLabel       matlab.ui.control.Label
-        CleaningpressurepsiSpinner    matlab.ui.control.Spinner
-        CleaningStartButton           matlab.ui.control.Button
-        timeminSpinnerLabel           matlab.ui.control.Label
-        CleaningTimeSpinner           matlab.ui.control.Spinner
-        CleaningTimer                 matlab.ui.control.Gauge
-        CleaningTimerTextArea         matlab.ui.control.TextArea
-        CleaningLamp                  matlab.ui.control.Lamp
-        CleaningCheckBox              matlab.ui.control.CheckBox
         CleaningQuickflushButton      matlab.ui.control.Button
+        CleaningCheckBox              matlab.ui.control.CheckBox
+        CleaningLamp                  matlab.ui.control.Lamp
+        CleaningTimerTextArea         matlab.ui.control.TextArea
+        CleaningTimer                 matlab.ui.control.Gauge
+        CleaningTimeSpinner           matlab.ui.control.Spinner
+        timeminSpinnerLabel           matlab.ui.control.Label
+        CleaningStartButton           matlab.ui.control.Button
+        CleaningpressurepsiSpinner    matlab.ui.control.Spinner
+        pressurepsiSpinnerLabel       matlab.ui.control.Label
         AboutTab                      matlab.ui.container.Tab
         AboutPanel                    matlab.ui.container.Panel
         AboutTextArea                 matlab.ui.control.TextArea
-        ConnectionlostPanel           matlab.ui.container.Panel
-        TextArea_4                    matlab.ui.control.TextArea
-        ClosePanel                    matlab.ui.container.Panel
-        CloseYesButton                matlab.ui.control.Button
-        CloseNoButton                 matlab.ui.control.Button
-        CloseLabel                    matlab.ui.control.Label
-        TextArea_17                   matlab.ui.control.TextArea
-        ManualButton                  matlab.ui.control.Button
-        BreakPushedLabel              matlab.ui.control.Label
+        StartSwitchonOctaflowIIsystemLabel  matlab.ui.control.Label
+        StartTextArea_2               matlab.ui.control.TextArea
+        StartAppButton                matlab.ui.control.Button
+        SynconButton                  matlab.ui.control.StateButton
+        BreakButton                   matlab.ui.control.Button
+        StartTextArea_1               matlab.ui.control.TextArea
     end
 
-    %%Octaflow II Control App V1.0 (February 2021) by Michael Rabenstein
+    %%Octaflow II Control App V1.0 (October 2021) by Michael Rabenstein
     %%Connection to device via CyUSB.dll adapted from code provided by
-    %%anonymous user on the Feb 19, 2015 04:41 AM at 
-    %%https://community.cypress.com/t5/USB-Low-Full-High-Speed/CyUSB-dll-in-MATLAB-problems-at-indexing-a-device-list/m-p/58551 (last access 04/13/2021) 
-    
+    %%anonymous user on the Feb 19, 2015 04:41 AM at
+    %%https://community.cypress.com/t5/USB-Low-Full-High-Speed/CyUSB-dll-in-MATLAB-problems-at-indexing-a-device-list/m-p/58551 (last access 04/13/2021)
+
     properties (Access = private)
         Octaflow %Octaflow II (tm) device properties
         CyUSBdll %dll properties
         BulkOutEndPt %Send data out to device properties
         BulkInEndPt %Fetch data from device properties
-        
+
         programm_running = 0; %Used to signal app.device_connected() if the app will be closed
         startup_1 %Byte command to make Octaflow II (tm) system ready
         startup_2 %Byte command to make Octaflow II (tm) system ready
@@ -130,7 +128,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
         flush %Byte command to switch on flush valve
         sequence_table %Table containing Bulkout bytes, valve ontime, step waittime and special valve status for valve sequence execution
         close_request = 0; %Value used for stopping start up device search loop when app will be closed
-        
+
         % %     16 Byte string is used for valve control:
         % %     1. Byte: 02 control settings? (Sync:01, valve:02 shut down:08)
         % %     2. Byte: 00 sync off:00, sync on: 01
@@ -149,15 +147,15 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
         % %     14. Byte: 00 ?
         % %     15. Byte: 00 ?
         % %     16. Byte: 00 for cleaning 27
-        
-        
+
+
         valves_off_hex =  '02000000000000C80A000C0000000000';
-        
+
         sync_table=[...%Replaces bytes 1-3
             '010108';... %Sync_on
             '010008';... %Sync_off
             ];
-        
+
         valve_table=[... %Replaces bytes 4-10
             '00000000C80A00';... %Valve_off
             '02000000C80A08';... %Valve_1
@@ -170,7 +168,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             '40000000C80A44';... %Valve_8
             'FF000000C80A44';... %Valve_all
             ];
-        
+
         extravalve_table=[... %Replaces byte 3
             '00';... %Extra_off
             '10';... %Flush
@@ -179,7 +177,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             '01';... %Alt_3
             '02';... %Alt_4
             ];
-        
+
         extravalve_table_dec=[... %Replaces byte 3
             0;... %Extra_off
             16;... %Flush
@@ -188,8 +186,8 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             1;... %Alt_3
             2;... %Alt_4
             ];
-        
-        
+
+
         pressure_table=[... %Replaces bytes 11-12
             '0C00';... %0 psi
             '2E00';... %1
@@ -223,8 +221,8 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             'E803';... %29
             'E803';... %Readed out as 30, but same as 29 psi
             ];
-        
-        
+
+
         priming_valves_table =[...
             '02000002000000C80A080C0000000000';... %Valve_1
             '02000008000000C80A110C0000000000';... %Valve_2
@@ -235,18 +233,18 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             '02000020000000C80A3C0C0000000000';... %Valve_7
             '02000040000000C80A440C0000000000';... %Valve_8
             ];
-        
+
     end
-    
+
     methods (Access = private)
-        
+
         function device_connected(app) %Should check in the background if the connection to the device is lost or emergency sutdown was initiated
             programm_running = 1;
             while programm_running == 1 %Will set to 0 if app is closed, stopping the function
-                
-                
-                
-                
+
+
+
+
                 device_present = 0;
                 usbdev = CyUSB.USBDeviceList(CyUSB.CyConst.DEVICES_CYUSB); %Loading all connected devices of the dll
                 if ~(usbdev.Count == 0) %if at least one device is connected...
@@ -270,11 +268,11 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                         catch
                             return
                         end
-                        
+
                         %             if programm_running == 0;
                         %               break
                         %             end
-                        
+
                         usbdev = CyUSB.USBDeviceList(CyUSB.CyConst.DEVICES_CYUSB); %Loading all connected devices of the dll
                         if ~(usbdev.Count == 0) %if at least one device is connected...
                             for i = 1:usbdev.Count %...screen the device list
@@ -284,8 +282,8 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                                     app.BulkOutEndPt = app.Octaflow.EndPointOf(0x02); %update the BulkOutEndPt property
                                     app.BulkInEndPt = app.Octaflow.EndPointOf(0x81); %update the BulkInEndPt property
                                     app.connect() %Restart the device
-                                    
-                                    
+
+
                                     app.TabGroup.Visible = 1; %Make the control area visible
                                     app.ConnectionlostPanel.Visible = 0;
                                     app.StartAppButton.Visible = 0;
@@ -306,8 +304,8 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 end
             end
         end
-        
-        
+
+
         function reset_all(app) %Reset all state buttons
             app.Valve1Button.Value = 0;
             app.DirectValve2Button.Value = 0;
@@ -323,7 +321,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.DirectAlt3Button.Value = 0;
             app.DirectAlt4Button.Value = 0;
         end
-        
+
         function reset_normal_valves(app) %Reset single valve state buttons
             app.Valve1Button.Value = 0;
             app.DirectValve2Button.Value = 0;
@@ -334,37 +332,37 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.Valve7Button.Value = 0;
             app.DirectValve8Button.Value = 0;
         end
-        
-        
+
+
         function connect(app) %Send start up commands to device
             BulkOutEndPt_local = app.BulkOutEndPt;
             BulkOutEndPt_local.XferData(app.startup_1,2);
             BulkOutEndPt_local.XferData(app.startup_2,16);
             BulkOutEndPt_local.XferData(app.valves_off,16);
         end
-        
+
         function bulkout(app,byte_out) %Sends 16 byte commands to device
             BulkOutEndPt_local = app.BulkOutEndPt;
             BulkOutEndPt_local.XferData(byte_out,16);
-            
+
         end
-        
-        
+
+
         function byte = byte_converter(~, command_hex) %Converts ASCII-hex character vector to ASCII-dec matrix, which can be send to device
             byte = sscanf(command_hex, '%2x');
-            
+
         end
         function single_valve(app,state,valve_selected) %Function used to control valves in single valve modus
             %%State: valve button on/off; valve_selected: pushed valve
             %%button
-            
+
             app.breaker = 0; %Reset breaker property
             breaker = 0; %set local breaker
             app.loop_time = 0; %Reset loop_time property
             app.timer_command = 1; %Reset timer_command
-            
+
             %%Deactivate unneeded control buttons to prevent confusion
-            
+
             app.pressurepsiSpinner_2.Enable = 0;
             app.DirectclosevalveSwitch.Enable = 0;
             app.DirectFlushButton.Enable = 0;
@@ -377,10 +375,10 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.PrimingPanel.Enable = 'off';
             app.CleaningPanel.Enable = 'off';
             app.AboutPanel.Enable = 'off';
-            
-            
+
+
             if state == 1 %If valve is switched on
-                
+
                 %%Deactivate other valve buttons
                 if ~(valve_selected == 1)
                     app.Valve1Button.Value = 0;
@@ -406,12 +404,12 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 if ~(valve_selected == 8)
                     app.DirectValve8Button.Value = 0;
                 end
-                
+
                 hexout = app.valves_off_hex; %copy switch off command for local editing
-                
+
                 hexout(7:20) = app.valve_table((valve_selected + 1),:); %Add selected valve characters to send out command
                 hexout(21:24) = app.pressure_table((app.pressurepsiSpinner_2.Value)+1,:); %Add selected pressure characters to send out command
-                
+
                 %%Check if Alt-valve is selected and generate send out
                 %%command
                 hexout_special = hexout;
@@ -424,29 +422,29 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 elseif app.DirectAlt4Button.Value == 1
                     hexout_special(5:6) = app.extravalve_table(6,:);
                 end
-                
+
                 app.bulkout(app.valves_off) %Send switch off command
-                
+
                 %%Convert valve command and send it out
                 hexout_byte = app.byte_converter(hexout);
                 app.bulkout(hexout_byte)
-                
+
                 %%If Alt-valve is selected, send the command out
                 if ~(eq(string(hexout_special),string(hexout)))
                     hexout_special_byte = app.byte_converter(hexout_special);
                     app.bulkout(hexout_special_byte)
                 end
-                
-                
+
+
                 if app.DirectclosevalveSwitch.Value == 0 %If not specific valve open time was selected, start timer
                     valve_on_timer(app)
                 end
-                
-                
+
+
                 if app.DirectclosevalveSwitch.Value == 1 %%If specific valve open time was selected
                     app.DirectModePanel.Enable = 'off'; %Deactivate valve panel
                     app.valvebutton_disable(); %Deactivate valve buttons
-                    
+
                     full_loops = floor(app.DirectOntimesSpinner.Value / 5); %Calculate full 5 s loops for break option
                     rest_time = rem(app.DirectOntimesSpinner.Value, 5); %Calculate rest time for break option
                     for i = 1:full_loops
@@ -463,9 +461,9 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     if breaker == 0
                         pause(rest_time) %Wait for selected open time
                     end
-                    
+
                     app.bulkout(app.valves_off) %Switch valves off
-                    
+
                     %%Reset and reactivate control buttons
                     app.reset_normal_valves()
                     app.DirectOntimesSpinner.Enable = 1;
@@ -477,15 +475,15 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     app.PrimingPanel.Enable = 'on';
                     app.CleaningPanel.Enable = 'on';
                     app.AboutPanel.Enable = 'on';
-                    
+
                     %%If Flush valve is selected, send out command
                     if app.DirectFlushButton.Value == 1
                         app.bulkout(app.valves_off)
                         app.bulkout(app.flush);
                     end
-                    
+
                 end
-                
+
             else %In case valve is switched of
                 app.bulkout(app.valves_off) %Switch valves off
                 app.valvebutton_enable();
@@ -496,8 +494,8 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 app.PrimingPanel.Enable = 'on';
                 app.CleaningPanel.Enable = 'on';
                 app.AboutPanel.Enable = 'on';
-                
-                
+
+
                 if app.SynconButton.Value == 1 %In case Sync is on, valve double command. Necessary for the device to send out a TTL pulse after closing last valve
                     app.bulkout(app.sync_valve_off);
                     app.bulkout(app.valves_off)
@@ -510,7 +508,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             end
             app.timer_command = 0; %Reset timer command
         end
-        
+
         function valvebutton_enable(app) %Enable all single valve buttons
             app.Valve1Button.Enable = 1;
             app.DirectValve2Button.Enable = 1;
@@ -527,7 +525,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.DirectAlt3Button.Enable = 1;
             app.DirectAlt4Button.Enable = 1;
         end
-        
+
         function valvebutton_disable(app) %Disable all single valve buttons
             app.Valve1Button.Enable = 0;
             app.DirectValve2Button.Enable = 0;
@@ -543,14 +541,14 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.DirectAlt2Button.Enable = 0;
             app.DirectAlt3Button.Enable = 0;
             app.DirectAlt4Button.Enable = 0;
-            
+
         end
         function break_all(app) %Break function to stop device.
             app.breaker = 1; %Set break property to 1 to stop loops
             pause(app.loop_time); %Wait for longest step in the loops
-            
+
             app.bulkout(app.valves_off) %Stop valves
-            
+
             %%Reset control buttons
             app.reset_all()
             app.DirectOntimesSpinner.Enable = 1;
@@ -563,20 +561,20 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.CleaningPanel.Enable = 'on';
             app.AboutPanel.Enable = 'on';
             app.timer_command = 0;
-            
+
             %%If Flush valve is selected, send out command
             if app.DirectFlushButton.Value == 1
                 app.bulkout(app.flush);
             end
             app.BreakPushedLabel.Visible = 0;
         end
-        
+
         function close_app(app) %Close app function
             app.programm_running = 0; %Stop property for device_connected() function
             app.breaker = 1; %Induce loop breaking
             app.close_request = 1; %Set close request property
-            
-            
+
+
             if app.loop_time < 6 %Wait for at least 6s to let loops correctly stops
                 waittime = 6;
             else
@@ -588,20 +586,20 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             end
             delete(app) %Close app
         end
-        
+
         function priming_hex_calc(app) %Generate hex command table for valve priming
-            
+
             priming_valves_table_local = app.priming_valves_table; %Generate local copy of table with valve hex codes
-            
+
             for i = 1:8 %%Add pressure hex to every valve, convert hex to dec and save to property
                 priming_valves_table_cache = priming_valves_table_local(i,:);
                 priming_valves_table_cache(21:24) = app.pressure_table((app.PrimingPressurepsiSpinner.Value)+1,:);
                 priming_valves_table_cache_hex = app.byte_converter(priming_valves_table_cache);
                 app.priming_hex(:,i) = priming_valves_table_cache_hex;
             end
-            
+
         end
-        
+
         function valve_on_timer(app) %Timer for single valve mode
             timer_command = app.timer_command;
             tic
@@ -611,10 +609,10 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 timer_command = app.timer_command;
             end
             app.DirectOntimeLabel.Text = sprintf('On time %s', datestr(seconds(0),'MM:SS')); %reset timer label
-            
-            
+
+
         end
-        
+
         function reset_special_valve(app,valve_selected) %%Prevents selecting more than one special valve
             app.bulkout(app.valves_off)
             if ~(valve_selected == 1)
@@ -632,14 +630,14 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             if ~(valve_selected == 5)
                 app.DirectAlt4Button.Value = 0;
             end
-            
+
         end
-        
-        
-        
+
+
+
     end
-    
-    
+
+
 
     % Callbacks that handle component events
     methods (Access = private)
@@ -648,9 +646,9 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
         function startupFcn(app)
             pause(2)
             app.OctaflowIIControlAppUIFigure.Name = 'OctaflowII Control App v1.0';
-            
+
             %%Put panels in position
-            
+
             movegui(app.OctaflowIIControlAppUIFigure,'center');
             app.ConnectionlostPanel.Visible = 0;
             app.BreakPushedLabel.Visible = 0;
@@ -658,10 +656,10 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.ConnectionlostPanel.Position = [0,0,638,508];
             app.BreakPushedLabel.Position = [163,224, 306,64];
             app.ClosePanel.Position = [0,0,638,508];
-            
+
             %             path = ctfroot;
             %             dllpath = fullfile(path,'CyUSB.dll');
-            
+
             try %%Load CyUSB dll (https://community.cypress.com/t5/USB-Low-Full-High-Speed/CyUSB-dll-in-MATLAB-problems-at-indexing-a-device-list/m-p/58555/highlight/true#M1224)
                 app.CyUSBdll = NET.addAssembly(which('CyUSB.dll')); %CyUSB.dll v.1.2.3.0 necessary (CyUSB.dll v.1.2.2.0 provided with the Octaflow II(tm) control software)
                 %%Not used fragments from the loading code
@@ -676,7 +674,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 %           return;
                 %         end
             end
-            
+
             %%Check if Octaflow II (tm) system is connected
             device_present = 0;
             while device_present == 0
@@ -685,7 +683,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 catch
                     return
                 end
-                
+
                 usbdev = CyUSB.USBDeviceList(CyUSB.CyConst.DEVICES_CYUSB); %Generate device list
                 if ~(usbdev.Count == 0) %if at least one device is connected
                     %         if ~isempty(usbdev)
@@ -697,29 +695,29 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                             app.BulkOutEndPt = app.Octaflow.EndPointOf(0x02); %define output channel
                             app.StartSwitchonOctaflowIIsystemLabel.Visible = 0; %Remove the reminder to connect the Octaflow II (tm) system
                             app.programm_running = 1;
-                            
+
                             break %break for-loop if the Octaflow II (tm) system was detected
                         end
                     end
                 else
                     app.StartSwitchonOctaflowIIsystemLabel.Visible = 1; %Make the reminder to connect the Octaflow II (tm) system visible
                 end
-                
-                
+
+
                 try
                     breaker = app.close_request; %Break loop if app will be shut down
                 catch
                     return
-                    
+
                 end
-                
+
                 if device_present == 0
                     pause(1)
-                    
+
                 end
-                
-                
-                
+
+
+
             end
             app.startup_1 =   app.byte_converter('7BC4');
             app.startup_2 =   app.byte_converter('01000000000000000000000000000000');
@@ -729,26 +727,33 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.sync_off =   app.byte_converter('01000800000000C80A000C0000000000');
             app.flush =     app.byte_converter('02001000000000C80A000C0000000000');
             app.sync_valve_off = app.byte_converter(app.priming_valves_table(1,:));
-            
-            
+
+
             app.connect() %Start device
             app.BulkOutEndPt.XferData(app.sync_on,16); %Activate sync out of the Octaflow II (tm) system
             app.priming_hex_calc();
-            
+
             app.DirectOntimeLabel.Text = sprintf('On time %s', datestr(seconds(0),'MM:SS')); %Settimeer label
-            
-            
+
+
             app.StartAppButton.Enable = 1; %Enable button to close startup window
-            
+
             app.CleaningTimer.Value = app.CleaningTimeSpinner.Value;
             app.device_connected() %Start function for continuous check if device is still present
-            
+
         end
 
         % Close request function: OctaflowIIControlAppUIFigure
         function OctaflowIIControlAppUIFigureCloseRequest(app, event)
-            app.ClosePanel.Visible = 1; %Make shutdown window visible
-            
+            %             app.ClosePanel.Visible = 1; %Make shutdown window visible
+
+            selection = uiconfirm(app.OctaflowIIControlAppUIFigure,'Do you want to close the app?','Confirm Close', 'Icon','warning');
+            if eq(selection, 'OK')
+                app.ClosePanel.Visible = 1; %Make shutdown window visible
+app.CloseLabel.Text = 'Closing app...';
+                app.close_app();
+            end
+
         end
 
         % Button pushed function: StartAppButton
@@ -764,7 +769,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
         function DirectclosevalveSwitchValueChanged(app, event)
             %%Switch between manual and timer based mode for closing single
             %%valves and make necessary controls visible
-            
+
             value = app.DirectclosevalveSwitch.Value;
             if value == 1
                 app.DirectOntimesSpinner.Visible = 1;
@@ -775,7 +780,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 app.OntimesSpinnerLabel.Visible = 0;
                 app.DirectOntimeLabel.Visible = 1;
             end
-            
+
         end
 
         % Value changed function: Valve1Button
@@ -783,7 +788,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.Valve1Button.Value;
             valve = 1;
             app.single_valve(state,valve) %Send button state and valve number to single valve function
-            
+
         end
 
         % Value changed function: DirectValve2Button
@@ -791,7 +796,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.DirectValve2Button.Value;
             valve = 2;
             app.single_valve(state,valve)
-            
+
         end
 
         % Value changed function: DirectValve3Button
@@ -799,7 +804,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.DirectValve3Button.Value;
             valve = 3;
             app.single_valve(state,valve)
-            
+
         end
 
         % Value changed function: DirectValve4Button
@@ -807,7 +812,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.DirectValve4Button.Value;
             valve = 4;
             app.single_valve(state,valve)
-            
+
         end
 
         % Value changed function: DirectValve5Button
@@ -815,7 +820,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.DirectValve5Button.Value;
             valve = 5;
             app.single_valve(state,valve)
-            
+
         end
 
         % Value changed function: DirectValve6Button
@@ -823,7 +828,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.DirectValve6Button.Value;
             valve = 6;
             app.single_valve(state,valve)
-            
+
         end
 
         % Value changed function: Valve7Button
@@ -831,7 +836,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.Valve7Button.Value;
             valve = 7;
             app.single_valve(state,valve)
-            
+
         end
 
         % Value changed function: DirectValve8Button
@@ -839,7 +844,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             state = app.DirectValve8Button.Value;
             valve = 8;
             app.single_valve(state,valve)
-            
+
         end
 
         % Button pushed function: BreakButton
@@ -848,21 +853,10 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             break_all(app) %Stops all valves/ breaks loops and reset buttons
         end
 
-        % Button pushed function: CloseNoButton
-        function CloseNoButtonPushed(app, event)
-            app.ClosePanel.Visible = 0;
-        end
-
-        % Button pushed function: CloseYesButton
-        function CloseYesButtonPushed(app, event)
-            app.CloseLabel.Text = 'Closing app...';
-            app.close_app();
-        end
-
         % Button pushed function: PrimingStartButton
         function PrimingStartButtonPushed(app, event)
             %%Starts Priming Sequence
-            
+
             app.breaker = 0; %Set breaker property
             breaker = 0;
             app.PrimingLamp.Color = [0.00,1.00,0.00];
@@ -872,9 +866,9 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             else
                 special_valve_direct_mode = 0;
             end
-            
+
             app.reset_all() %Reset single valve buttons
-            
+
             %%Deactivate unneeded control buttons to prevent confusion
             app.PrimingOntimevalvesSpinner.Editable = 0;
             app.PrimingWaittimeSpinner.Editable = 0;
@@ -883,22 +877,22 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.PrimingStartButton.Enable = 0;
             app.PrimingSpecialDropDown.Enable = 0;
             app.PrimingValvedirectionSwitch.Enable = 0;
-            
+
             app.SynconButton.Enable = 0;
             app.DirectModePanel.Enable = 'off';
             app.SequencePanel.Enable = 'off';
             app.CleaningPanel.Enable = 'off';
             app.AboutPanel.Enable = 'off';
-            
-            
-            
-            
-            
+
+
+
+
+
             priming_valves_table_local_hex = app.priming_hex; %Fetch byte code table
-            
-            
+
+
             special_valve = str2double(app.PrimingSpecialDropDown.Value); %Fetch selected special valve
-            
+
             %
             if app.PrimingValvedirectionSwitch.Value == 1 %reverse the byte order in case the valve direction is reversed
                 priming_valves_table_local_hex = flip(priming_valves_table_local_hex,2);
@@ -909,19 +903,19 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     priming_valves_table_local_hex_special(3,i) = app.extravalve_table_dec(special_valve + 1); %...and add the command
                 end
             end
-            
+
             timeloop = app.PrimingOntimevalvesSpinner.Value; %Read out valve on time
             waitbetween = app.PrimingWaittimeSpinner.Value; %Read out break time between valves
-            
-            
+
+
             app.loop_time = 3;
-            
+
             %             if timeloop > waitbetween %Check wich time is longer to set waiting time for break command
             %                 app.loop_time = timeloop;
             %             else
             %                 app.loop_time = waitbetween;
             %             end
-            
+
             loops = app.PrimingLoopsSpinner.Value; %Read number of loops
             app.bulkout(app.valves_off) %Close all valves
             for i_loops = 1:loops
@@ -935,20 +929,20 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     else
                         valve_label = i_valves;
                     end
-                    
+
                     app.PrimingValveStandbyLabel.Text = sprintf('Valve %d on',valve_label); %Set label
                     app.PrimingTimer.Value = timeloop + 1; %Set residual time for timer
                     app.bulkout(priming_valves_table_local_hex(:,i_valves)) %Open valve
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
                     if special_valve > 1 %Switch Alt valve on, if selected
                         app.bulkout(priming_valves_table_local_hex_special(:,i_valves))
                     end
-                    
-                    
+
+
                     for i_time = 1:timeloop %Countdown timer with visual feedback
                         try
                             breaker = app.breaker; %Check if break button was pushed
@@ -961,22 +955,22 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                         app.PrimingTimer.Value = app.PrimingTimer.Value-1;
                         pause(1)
                     end
-                    
+
                     if breaker == 1
                         break
                     end
-                    
+
                     app.PrimingTimer.Value = 0; %Set timer to 0
-                    
+
                     app.PrimingValveStandbyLabel.Text = sprintf('Valve %d wait',valve_label); %Set label
-                    
+
                     app.bulkout(app.valves_off) %Close valves
-                    
+
                     if ((i_valves < 8) + (i_loops < loops)) > 0 %Apply waittime except for the last valve in last loop
                         if special_valve == 1 %Switch Flush valve on, if selected
                             app.bulkout(app.flush)
                         end
-                        
+
                         try
                             breaker = app.breaker; %Check if break button was pushed
                         catch
@@ -985,7 +979,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                         if breaker == 1
                             break
                         end
-                        
+
                         app.PrimingTimer.Value = waitbetween + 1;%Countdown timer with visual feedback
                         for i_time = 1:waitbetween
                             try
@@ -1003,7 +997,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     if breaker == 1
                         break
                     end
-                    
+
                     app.PrimingTimer.Value = 0;
                     try
                         breaker = app.breaker; %Check if break button was pushed
@@ -1013,9 +1007,9 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     if breaker == 1
                         break
                     end
-                    
+
                 end
-                
+
                 try
                     breaker = app.breaker; %Check if break button was pushed
                 catch
@@ -1025,14 +1019,14 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     break
                 end
             end
-            
+
             if special_valve == 1 %Close flush valve, if selected or activate
                 if breaker == 0
                     app.bulkout(app.flush)
                     app.DirectFlushButton.Value = 1;
                 end
             end
-            
+
             if special_valve_direct_mode > 0 %Reactivate previously state of selected special valves
                 if  ~(special_valve == 1) && special_valve_direct_mode == 1 %In case Flush was selected in direct mode but not in priming sequence
                     app.bulkout(app.flush)
@@ -1047,9 +1041,9 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     app.DirectAlt4Button.Value = 1;
                 end
             end
-            
-            
-            
+
+
+
             %Reactivate commands
             app.loop_time = 0;
             app.PrimingValveStandbyLabel.Text = sprintf('Standby');
@@ -1068,13 +1062,13 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.PrimingStartButton.Enable = 1;
             app.PrimingSpecialDropDown.Enable = 1;
             app.PrimingValvedirectionSwitch.Enable = 1;
-            
+
             beep
         end
 
         % Value changed function: PrimingOntimevalvesSpinner
         function PrimingOntimevalvesSpinnerValueChanged(app, event)
-            
+
             app.PrimingTimer.Value = app.PrimingOntimevalvesSpinner.Value; %Set timer
             %       app.priming_hex_calc();
         end
@@ -1096,7 +1090,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 app.SynconButton.BackgroundColor = [0.50,0.00,0.00];
                 app.SynconButton.Text = 'Sync off';
                 app.bulkout(app.sync_off)
-                
+
             end
         end
 
@@ -1111,7 +1105,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             else
                 app.bulkout(app.valves_off) %open flush valve
             end
-            
+
         end
 
         % Value changed function: DirectAlt1Button
@@ -1150,7 +1144,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
         function SequenceAddstepButtonPushed(app, event)
             %%Add step to the sequence at selected position with selected
             %%properties
-            
+
             %%Deactivate unneeded control buttons to prevent confusion
             app.SequenceSeqEditPanel.Enable = 'off';
             app.SequenceAddstepButton.Enable = 0;
@@ -1159,12 +1153,12 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.SequenceDeletestepButton.Enable = 0;
             app.SequenceDeleteallButton.Enable = 0;
             app.SequenceCheckBox.Value = 0;
-            
+
             new_step = {app.SequenceStepSpinner.Value, app.SequenceValveSpinner.Value, app.SequencePressureSpinner.Value, app.SequenceOnTime.Value, app.SequenceWaitTimeAfter.Value, app.SequenceSpecialDropDown.Value}; %Create new step value array
             step_pos = app.SequenceStepSpinner.Value;
-            
+
             SeqTable_cache = app.SequenceTable.Data; %Create a local copy of the sequence table
-            
+
             if isempty(SeqTable_cache) %If the sequence table is empty...
                 SeqTable_cache = new_step; %...set SeqTable_cache as new_step...
                 app.SequenceStepSpinner.Enable = 1; %... and activate step position and delete step spinner
@@ -1174,26 +1168,26 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             else %Place the step at the selected position
                 SeqTable_cache = [SeqTable_cache(1:(step_pos-1),:);new_step; SeqTable_cache((step_pos):end,:)];
             end
-            
+
             if size(SeqTable_cache,1) > 1 %Refresh the step column values
                 for i = 1:size(SeqTable_cache,1)
                     SeqTable_cache{i,1} = i;
                 end
             end
-            
-            
+
+
             app.SequenceTable.Data = SeqTable_cache; %Set the new SeqTable to the GUI tables property
-            
+
             %%Prepare the byte out table with on and wait times
             sequence_table_local = {};
-            
+
             for i = 1:size(SeqTable_cache,1) %for each sequence step
                 %%prepare out bytes with valve and pressure information
                 valves_hex_local =  app.valves_off_hex;
                 valves_hex_local(7:20) = app.valve_table((SeqTable_cache{i,2} + 1),:);
                 valves_hex_local(21:24) = app.pressure_table((SeqTable_cache{i,3})+1,:);
                 valves_hex_local_byte = app.byte_converter(valves_hex_local);
-                
+
                 %%Prepare special valve information
                 if eq(string(SeqTable_cache{i,6}),"Flush")
                     special_valve = 1;
@@ -1208,22 +1202,22 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 else
                     special_valve = 0;
                 end
-                
+
                 %%Create send out information array line and add it to
                 %%array
                 sequence_table_local_cache = {valves_hex_local_byte, SeqTable_cache{i,4},SeqTable_cache{i,5},special_valve};
                 sequence_table_local = [sequence_table_local;sequence_table_local_cache];
             end
-            
+
             app.sequence_table = sequence_table_local; %save local array to property
-            
+
             %%Modify step and delete spinner based on new number of steps
             %%in sequence
             app.SequenceStepSpinner.Limits = [1, (size(SeqTable_cache,1)+1)];
             app.SequenceStepSpinner.Value = (size(SeqTable_cache,1)+1);
             app.SequenceDeleteSpinner.Limits = [0, size(SeqTable_cache,1)];
-            
-            
+
+
             %%Enable control buttons
             app.SequenceAddstepButton.Enable = 1;
             app.SequenceSeqEditPanel.Enable = 'on';
@@ -1240,13 +1234,13 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             else
                 app.SequenceDeletestepButton.Enable = 0;
             end
-            
+
         end
 
         % Button pushed function: SequenceDeletestepButton
         function SequenceDeletestepButtonPushed(app, event)
             %%Delets selected step
-            
+
             %%Deactivate unneeded control buttons to prevent confusion
             app.SequenceAddstepButton.Enable = 0;
             app.SequenceDeletestepButton.Enable = 0;
@@ -1254,66 +1248,66 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.SequenceCheckBox.Value = 0;
             SeqTable_cache = app.SequenceTable.Data;
             sequence_table_local = app.sequence_table;
-            
+
             %%Delete selected step from the table and the sequence_table
             %%property
             delete_step = app.SequenceDeleteSpinner.Value;
             SeqTable_cache(delete_step,:) = [];
             sequence_table_local(delete_step,:) = [];
-            
-            
-            
+
+
+
             if size(SeqTable_cache,1) > 0 %Refresh the step column values, if steps are left in the table
                 for i = 1:size(SeqTable_cache,1)
                     SeqTable_cache{i,1} = i;
                 end
-                
+
                 %%Modify step and delete spinner based on new number of steps
                 %%in sequence
                 app.SequenceStepSpinner.Limits = [1, (size(SeqTable_cache,1)+1)];
                 app.SequenceStepSpinner.Value = (size(SeqTable_cache,1)+1);
                 app.SequenceDeleteSpinner.Limits = [0, size(SeqTable_cache,1)];
-                
-                
-                
-                
+
+
+
+
             else %if the last step was deleted from the table
                 %%Modify step and delete spinner
                 app.SequenceStepSpinner.Limits = [1, 2];
                 app.SequenceStepSpinner.Value = 1;
                 app.SequenceDeleteSpinner.Limits = [0, 1];
-                
+
                 %%Disable start button, step and delete spinner
                 app.SequenceStartsequenceButton.Enable = 0;
                 app.SequenceStepSpinner.Enable = 0;
                 app.SequenceDeleteSpinner.Enable = 0;
-                
-                
+
+
             end
-            
+
             %%Set changes to properties
             app.SequenceTable.Data = SeqTable_cache;
             app.sequence_table = sequence_table_local;
-            
-            
+
+
             app.SequenceDeleteSpinner.Value = 0; %Set delete spinner to 0
-            
+
             %Reactivate control
             app.SequenceAddstepButton.Enable = 1;
-            
-            
-            
-            
+
+
+
+
         end
 
         % Button pushed function: SequenceStartsequenceButton
         function SequenceStartsequenceButtonPushed(app, event)
             %%Starts valve sequence based on table
-            
+
             app.breaker = 0;
             breaker = 0;
             app.SequenceLamp.Color = [0.00,1.00,0.00];
-            
+
             %%Deactivate unneeded control buttons to prevent confusion
             app.SynconButton.Enable = 0;
             app.DirectModePanel.Enable = 'off';
@@ -1329,23 +1323,23 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.SequenceDeleteallButton.Enable = 0;
             app.SequenceCheckBox.Value = 0;
             app.SequenceCheckBox.Enable = 0;
-            
-            
-            
-            
+
+
+
+
             sequence_table_local = app.sequence_table; %Create a local copy of the sequence table
             app.loop_time = 3;  %Set wait time for break conditions
-            
+
             for i = 1: size(sequence_table_local,1) %Send out the commands stepwise
-                
+
                 %%Fetch the data
                 hexout_byte = sequence_table_local{i,1};
                 ontime = sequence_table_local{i,2};
                 waittime = sequence_table_local{i,3};
                 specialvalve = sequence_table_local{i,4};
-                
+
                 %%Determine longest pause time for break wait time
-                
+
                 %                 if ontime > waittime
                 %                     app.loop_time = ontime;
                 %                 else
@@ -1357,8 +1351,8 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 rest_time_on = rem(ontime, 2); %Calculate rest time for break option
                 full_loops_wait = floor(waittime / 2); %Calculate full 2 s loops for break option
                 rest_time_wait = rem(waittime, 2); %Calculate rest time for break option
-                
-                
+
+
                 %%Prepare send out byte in case an Alt valve was selected
                 if specialvalve > 1
                     hexout_special_byte = hexout_byte;
@@ -1372,15 +1366,15 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                         hexout_special_byte(3) = 2;
                     end
                 end
-                
+
                 app.bulkout(app.valves_off) %switch off all valves
                 app.bulkout(hexout_byte) %Activate valve
-                
+
                 if specialvalve > 1
                     app.bulkout(hexout_special_byte) %Activate special valve
                 end
                 app.SequenceStepStandbyLabel.Text = sprintf('Step %d on',i); %Set label
-                
+
                 for i = 1:full_loops_on
                     pause(2)
                     try
@@ -1396,12 +1390,12 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 if breaker == 0
                     pause(rest_time_on) %Wait for rest of the selected open time
                 end
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
                 %Break loop if break button was pushed
                 try
                     breaker = app.breaker; %Check if break button was pushed
@@ -1411,17 +1405,17 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 if breaker == 1
                     break
                 end
-                
-                
+
+
                 app.bulkout(app.valves_off) %switch valves off
-                
+
                 if specialvalve == 1 %switch flush valve off, if selected
                     app.bulkout(app.flush);
                 end
-                
-                
+
+
                 app.SequenceStepStandbyLabel.Text = sprintf('Step %d wait',i); %Set label
-                
+
                 for i = 1:full_loops_wait
                     pause(2)
                     try
@@ -1436,11 +1430,11 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 if breaker == 0
                     pause(rest_time_wait) %Wait for rest of the selected open time
                 end
-                
-                
-                
-                
-                
+
+
+
+
+
                 %Break loop if break button was pushed
                 try
                     breaker = app.breaker; %Check if break button was pushed
@@ -1450,17 +1444,17 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 if breaker == 1
                     break
                 end
-                
-                
+
+
             end
-            
+
             app.bulkout(app.valves_off) %switch valves off
-            
+
             if app.SynconButton.Value == 1 %If Sync is on, necessary to send out TTL pulse when last valve was closed
                 app.bulkout(app.sync_valve_off);
                 app.bulkout(app.valves_off)
             end
-            
+
             %%Reactivate commands
             app.DirectFlushButton.Value = 0;
             app.SequenceLamp.Color = [0.50,0.50,0.50];
@@ -1469,7 +1463,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.PrimingPanel.Enable = 'on';
             app.CleaningPanel.Enable = 'on';
             app.AboutPanel.Enable = 'on';
-            
+
             app.loop_time = 0;
             app.SequenceSeqEditPanel.Enable = 'on';
             app.SequenceDeleteSpinner.Enable = 1;
@@ -1477,7 +1471,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.SequenceCheckBox.Enable = 1;
             app.SequenceStartsequenceButton.Enable = 1;
             app.SequenceStepStandbyLabel.Text = sprintf('Standby');
-            
+
             beep
         end
 
@@ -1490,37 +1484,37 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                 app.SequenceDeleteallButton.Enable = 1; %...enable delete all button
             else
                 app.SequenceDeleteallButton.Enable = 0; %disables delete all button
-                
+
             end
         end
 
         % Button pushed function: SequenceDeleteallButton
         function SequenceDeleteallButtonPushed(app, event)
             %%Delete complete sequence table
-            
+
             %%Deactivate unneeded control buttons to prevent confusion
             app.SequenceAddstepButton.Enable = 0;
             app.SequenceDeletestepButton.Enable = 0;
             app.SequenceDeleteallButton.Enable = 0;
             app.SequenceCheckBox.Value = 0;
             app.SequenceStartsequenceButton.Enable = 0;
-            
-            
+
+
             app.SequenceTable.Data = {}; %Delete sequence table data
-            
+
             %%Modify step and delete spinner
             app.SequenceStepSpinner.Limits = [1, 2];
             app.SequenceStepSpinner.Value = 1;
             app.SequenceDeleteSpinner.Limits = [0, 1];
-            
+
             %%Disable start button, step and delete spinner
             app.SequenceStartsequenceButton.Enable = 0;
             app.SequenceStepSpinner.Enable = 0;
             app.SequenceDeleteSpinner.Enable = 0;
-            
+
             %Enable control buttons
             app.SequenceAddstepButton.Enable = 1;
-            
+
         end
 
         % Value changed function: CleaningCheckBox
@@ -1530,21 +1524,21 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             else
                 app.CleaningQuickflushButton.Enable = 0;
             end
-            
+
         end
 
         % Button pushed function: CleaningStartButton
         function CleaningStartButtonPushed(app, event)
             %%Opens all regular valves simultaneously for set time with set
             %%pressure
-            
+
             app.breaker = 0; %Set break property
             app.reset_all()
             app.loop_time = 5; %Set break wait time
-            
-            
+
+
             app.CleaningLamp.Color = [0.00,1.00,0.00];
-            
+
             %%Deactivate unneeded control buttons to prevent confusion
             app.CleaningTimeSpinner.Editable = 0;
             app.CleaningpressurepsiSpinner.Editable = 0;
@@ -1557,21 +1551,21 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.SequencePanel.Enable = 'off';
             app.PrimingPanel.Enable = 'off';
             app.AboutPanel.Enable = 'off';
-            
-            
-            
+
+
+
             %%Prepare send out bytes
             cleaning_off = '02000000000000C80A000C0000000027';
             cleaning_off_hex = app.byte_converter(cleaning_off);
             cleaning_on = '020000FF000000C80A44E80300000027';
             cleaning_on(21:24) = app.pressure_table((app.CleaningpressurepsiSpinner.Value)+1,:);
             cleaning_on_hex = app.byte_converter(cleaning_on);
-            
-            
-            
+
+
+
             app.bulkout(cleaning_on_hex) %open valves
-            
-            
+
+
             app.CleaningTimer.Value = app.CleaningTimeSpinner.Value;
             timer_down = app.CleaningTimeSpinner.Value;
             for i = 1:(12*app.CleaningTimeSpinner.Value) %Refresh residual time timer every 5s
@@ -1586,9 +1580,9 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     break
                 end
             end
-            
+
             app.bulkout(cleaning_off_hex) %close valves
-            
+
             %Reactivate control panels
             app.CleaningLamp.Color = [0.50,0.50,0.50];
             app.CleaningTimeSpinner.Editable = 1;
@@ -1602,11 +1596,11 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.AboutPanel.Enable = 'on';
             app.CleaningTimer.Value = app.CleaningTimeSpinner.Value;
             beep
-            
-            
-            
-            
-            
+
+
+
+
+
         end
 
         % Button pushed function: CleaningQuickflushButton
@@ -1616,32 +1610,32 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.CleaningQuickflushButton.Enable = 0;
             app.CleaningCheckBox.Enable = 0;
             app.reset_all()
-            
-            
-            
+
+
+
             app.CleaningQuickflushButton.BackgroundColor = [0.00,1.00,0.00];
-            
-            
+
+
             %%Deactivate unneeded control buttons to prevent confusion
             app.CleaningTimeSpinner.Editable = 0;
             app.CleaningpressurepsiSpinner.Editable = 0;
             app.CleaningStartButton.Enable = 0;
             app.SynconButton.Enable = 0;
-            
+
             app.DirectModePanel.Enable = 'off';
             app.SequencePanel.Enable = 'off';
             app.PrimingPanel.Enable = 'off';
             app.AboutPanel.Enable = 'off';
-            
-            
-            
+
+
+
             %%Prepare send out bytes
             cleaning_off = '02000000000000C80A000C0000000027';
             cleaning_off_hex = app.byte_converter(cleaning_off);
             cleaning_on = '020000FF000000C80A44E80300000027';
             cleaning_on_hex = app.byte_converter(cleaning_on);
-            
-            
+
+
             app.CleaningTimer.Value = 15/60;
             app.bulkout(cleaning_on_hex) %open valves
             for i = 1:15
@@ -1656,11 +1650,11 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
                     break
                 end
             end
-            
+
             app.bulkout(cleaning_off_hex) %close valves
-            
+
             %Reactivate control panels
-            
+
             app.CleaningTimeSpinner.Editable = 1;
             app.CleaningpressurepsiSpinner.Editable = 1;
             app.CleaningStartButton.Enable = 1;
@@ -1679,7 +1673,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
         % Value changed function: CleaningTimeSpinner
         function CleaningTimeSpinnerValueChanged(app, event)
             app.CleaningTimer.Value = app.CleaningTimeSpinner.Value;
-            
+
         end
 
         % Button pushed function: ManualButton
@@ -1743,7 +1737,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.StartTextArea_2.HorizontalAlignment = 'center';
             app.StartTextArea_2.FontSize = 20;
             app.StartTextArea_2.Position = [28 188 593 253];
-            app.StartTextArea_2.Value = {'Octaflow II Control App was designed with MATLAB R2020b'; 'Cyusb.sys driver (1.2.3.14) must be installed '; ''; 'This is not an official control app for the Octaflow II™ system'; 'Use at your own risk'; ''; 'If connection with the Octaflow II™ system is lost when valves are open, app freezes and must be force closed'; ''};
+            app.StartTextArea_2.Value = {'Octaflow II Control App was designed with MATLAB R2021b'; 'Cyusb.sys driver (1.2.3.14) must be installed '; ''; 'This is not an official control app for the Octaflow II™ system'; 'Use at your own risk'; ''; 'If connection with the Octaflow II™ system is lost when valves are open, app freezes and must be force closed'; ''};
 
             % Create StartSwitchonOctaflowIIsystemLabel
             app.StartSwitchonOctaflowIIsystemLabel = uilabel(app.OctaflowIIControlAppUIFigure);
@@ -2277,7 +2271,7 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.AboutTextArea = uitextarea(app.AboutPanel);
             app.AboutTextArea.Editable = 'off';
             app.AboutTextArea.Position = [8 153 619 177];
-            app.AboutTextArea.Value = {'Octaflow II Control App V1.0 was designed with MATLAB R2020b by Michael Rabenstein'; ''; 'Octaflow II™ is a trademark of ALA Scientific Instruments, Inc., Farmingdale, NY, USA.'; ''; 'This app includes the CyUSB.dll v. 1.2.3.0 from the Cypress Semiconductor Corp., San Jose, CA, USA.'; 'Usage is only allowed with the Octaflow II ™ system or other devices with Cypress controllers.'; ''; 'No official released control app, use at your own risk'; ''; ''; 'For further information please refer to the manual'};
+            app.AboutTextArea.Value = {'Octaflow II Control App V1.0 was designed with MATLAB R2021b by Michael Rabenstein'; ''; 'Octaflow II™ is a trademark of ALA Scientific Instruments, Inc., Farmingdale, NY, USA.'; ''; 'This app includes the CyUSB.dll v. 1.2.3.0 from the Cypress Semiconductor Corp., San Jose, CA, USA.'; 'Usage is only allowed with the Octaflow II ™ system or other devices with Cypress controllers.'; ''; 'No official released control app, use at your own risk'; ''; ''; 'For further information please refer to the manual'};
 
             % Create ConnectionlostPanel
             app.ConnectionlostPanel = uipanel(app.OctaflowIIControlAppUIFigure);
@@ -2297,23 +2291,12 @@ classdef Octaflow_control_exported < matlab.apps.AppBase
             app.ClosePanel.Title = 'Close';
             app.ClosePanel.Position = [656 -582 638 508];
 
-            % Create CloseYesButton
-            app.CloseYesButton = uibutton(app.ClosePanel, 'push');
-            app.CloseYesButton.ButtonPushedFcn = createCallbackFcn(app, @CloseYesButtonPushed, true);
-            app.CloseYesButton.Position = [186 211 100 22];
-            app.CloseYesButton.Text = 'Yes';
-
-            % Create CloseNoButton
-            app.CloseNoButton = uibutton(app.ClosePanel, 'push');
-            app.CloseNoButton.ButtonPushedFcn = createCallbackFcn(app, @CloseNoButtonPushed, true);
-            app.CloseNoButton.Position = [346 211 100 22];
-            app.CloseNoButton.Text = 'No';
-
             % Create CloseLabel
             app.CloseLabel = uilabel(app.ClosePanel);
+            app.CloseLabel.HorizontalAlignment = 'center';
             app.CloseLabel.FontSize = 20;
-            app.CloseLabel.Position = [180 266 278 24];
-            app.CloseLabel.Text = 'Do you want to close the app?';
+            app.CloseLabel.Position = [180 266 284 24];
+            app.CloseLabel.Text = 'Closing app...';
 
             % Create TextArea_17
             app.TextArea_17 = uitextarea(app.OctaflowIIControlAppUIFigure);
