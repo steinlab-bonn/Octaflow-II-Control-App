@@ -1,5 +1,6 @@
 # Octaflow II Control App V1.0
 by Michael Rabenstein (October 2021)
+DOI: https://doi.org/10.5281/zenodo.5556799
 
 About:
 The Octaflow II Control App is a user written alternative to the official control software.  
